@@ -1,0 +1,261 @@
+:root {
+  --main-bg-color: #ebebeb;
+  --main-font-family: "Cormorant", serif;
+  --main-font-size: 5vh;
+  --main-color-red: red;
+  --main-color-gold: #8d734b;
+  --main-color-dark-brown: #140d07;
+  --main-box-shadow: 20px 20px 30px darkgrey;
+}
+
+body {
+  background-color: var(--main-bg-color);
+}
+
+h2 {
+  font-family: var(--main-font-family);
+  font-size: var(--main-font-size);
+}
+
+h5 {
+  color: var(--main-color-red);
+}
+
+.gold-text {
+  color: var(--main-color-gold);
+}
+
+.dark-brown {
+  background-color: var(--main-color-dark-brown);
+}
+
+.logo {
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+}
+
+.piombino-image {
+  background: url("../assets/img/home/background/piombino.jpg");
+}
+
+.casa1-image {
+  background: url("../assets/img/casa1/background/dorm.webp");
+}
+
+.casa2-image {
+  background: url("../assets/img/casa2/background/background.jpg");
+}
+
+.activities-image {
+  background: url("../assets/img/activities/background/cocktails.webp");
+}
+
+.calendar-image {
+  background: url("../assets/img/calendar/background/calendar.jpeg");
+}
+.piombino-image,
+.casa1-image,
+.casa2-image,
+.activities-image,
+.calendar-image {
+  filter: brightness(80%);
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.map {
+  height: 280px;
+}
+
+.map-big {
+  height: 400px;
+}
+
+#map {
+  filter: grayscale(70%);
+}
+
+.card-left {
+  display: flex;
+  justify-content: left;
+}
+
+.card-right {
+  display: flex;
+  justify-content: right;
+}
+
+.shadow {
+  filter: drop-shadow(var(--main-box-shadow));
+}
+
+@keyframes slideInFromLeft {
+  to {
+    filter: blur(0);
+    left: 0;
+  }
+}
+
+@keyframes slideInFromRight {
+  to {
+    filter: blur(0);
+    left: 0;
+  }
+}
+
+.slide-from-left {
+  position: relative;
+  filter: blur(10px);
+  left: -100%;
+  animation: slideInFromLeft 2s ease forwards;
+}
+
+.slide-from-right {
+  position: relative;
+  filter: blur(5px);
+  left: 100%;
+  animation: slideInFromRight 2s ease forwards;
+}
+
+.hidden {
+  opacity: 0;
+  transition: all 2s;
+}
+
+.show {
+  opacity: 1;
+}
+
+@media (max-width: 991px) {
+  .sticky-left {
+    z-index: -5;
+    opacity: 0;
+    position: absolute;
+  }
+  .vanish {
+    display: none;
+  }
+}
+
+.vertical {
+  display: flex;
+  transform-origin: 50%;
+  transform: rotate(180deg);
+  writing-mode: vertical-lr;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+@media (min-width: 992px) {
+  .sticky-left {
+    position: fixed;
+    top: 40%;
+    left: 0;
+    width: 80px;
+    height: 48vh;
+    background-color: var(--main-color-gold);
+    padding: 10px;
+    z-index: 10;
+  }
+}
+
+@media (max-height: 999px) {
+  .sticky-left {
+    display: none;
+  }
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  color: white;
+}
+
+.contact-item {
+  text-align: left;
+}
+
+.contact-item span {
+  display: block;
+}
+
+.contact-item a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.gold,
+.gold:active,
+.gold:visited,
+.gold:focus {
+  background-color: var(--main-color-gold);
+  border-color: var(--main-color-gold);
+  color: white;
+}
+
+.gold:hover {
+  color: black;
+}
+
+.gold2,
+.gold2:active,
+.gold2:visited,
+.gold2:focus {
+  background-color: var(--main-color-dark-brown);
+  border-color: var(--main-color-gold);
+  color: white;
+}
+
+.gold2:hover {
+  color: var(--main-color-dark-brown);
+  background-color: var(--main-color-gold);
+}
+
+.amenities-icon {
+  width: 42px;
+  height: 42px;
+  margin-right: 42pt;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 3px;
+}
+
+.day {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.day.free {
+  background-color: #f4d5a6;
+}
+
+.day.not-free {
+  background-color: #604f36;
+  color: white;
+}
+
+.day.no-data {
+  background-color: #f8f9fa;
+  color: #aaa;
+}
+
+.day .row {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .calendar {
+    overflow-x: auto;
+    max-width: 100%;
+  }
+}

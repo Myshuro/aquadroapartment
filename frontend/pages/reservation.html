@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Reservation Request</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="icon" type="image/png" href="../assets/svg/favicon.ico" />
+  </head>
+  <body class="background">
+    <div class="container">
+      <h2 class="mt-4">Reservation Request</h2>
+      <h5 class="mt-4">
+        Please note that this is just a reservation request, you will recieve a
+        confirmation email once it was registered
+      </h5>
+      <form id="reservationForm" class="mt-4">
+        <div class="form-group">
+          <label for="lastname">Last Name:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="lastname"
+            name="lastname"
+            required />
+        </div>
+
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            name="name"
+            required />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="phone"
+            name="phone"
+            required />
+          <small id="phoneHelp" class="form-text text-muted"
+            >Include country code (e.g., +1 for USA).</small
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address:</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            required />
+        </div>
+
+        <div class="form-group">
+          <label for="people">Number of People:</label>
+          <select class="custom-select" id="people" name="people">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="apartment">Apartment:</label>
+          <select class="custom-select" id="apartment" name="apartment">
+            <option value="apartment1">Apartment 1</option>
+            <option value="apartment2">Apartment 2</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="checkin">Check-in Date:</label>
+          <input
+            type="date"
+            class="form-control"
+            id="checkin"
+            name="checkin"
+            required />
+        </div>
+
+        <div class="form-group">
+          <label for="checkout">Check-out Date:</label>
+          <input
+            type="date"
+            class="form-control"
+            id="checkout"
+            name="checkout"
+            required />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message/Special Requests:</label>
+          <textarea
+            class="form-control"
+            id="message"
+            name="message"
+            rows="4"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="../scripts/formsending.js"></script>
+  </body>
+</html>

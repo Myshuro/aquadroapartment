@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Check Price and Availability</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">  
+  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="icon" type="image/png" href="../assets/svg/favicon.ico" />
+  </head>
+  <body>
+    <header class="dark-brown sticky-top ">
+      <div class="container">  
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="../../index.html">
+              <img
+              src="../assets/svg/logo.jpg "
+                alt="Aquadro logo"
+                width="50"
+                height="50"
+                class="d-inline-block logo"
+              />
+              <span class="fs-4 ms-4 text-light">Aquadro</span>
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-dark navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item m-2">
+                  <a class="nav-link text-light" href="../../index.html">Home</a>
+                </li>
+                <li class="nav-item m-2">
+                  <a class="nav-link text-light" href="./casa1.html">Apartment 1</a>
+                </li>
+                <li class="nav-item m-2">
+                  <a class="nav-link text-light" href="./casa2.html">Apartment 2</a>
+                </li>
+                <li class="nav-item m-2">
+                  <a class="nav-link text-light" href="./activities.html"
+                  >Activities in Piombino</a
+                >
+              </li>
+              <li class="nav-item m-2">
+                <a class="nav-link gold-text" href="./calendar.html"
+                >Availability</a
+              >
+            </li>
+              <li class="nav-item m-2">
+                <a 
+                target="_blank"
+                href="https://www.airbnb.it/rooms/49635259?source_impression_id=p3_1713806433_qxi2ILpo7mhVFQXY#availability-calendar">
+
+                  <button type="button" class="btn gold2" >
+                  Book on Airbnb
+                </button>
+                </a>
+                
+              </li>
+        
+              <li class="nav-item m-2">
+                <a 
+                target="_blank"
+                href="./reservation.html"
+                >
+                  <button type="button" class="btn gold" >
+                  BOOK WITH US
+                </button>
+                </a>
+                
+              </li>
+            </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main >
+      <div class="py-0">
+        <div class="p-5 mb-4 bg-body-tertiary calendar-image">
+          <div class="container container-fluid py-5">
+            <h1 class="display-3 fw-bold slide-from-left">Check</h1>
+            <p class="col-md-8 fs-2 slide-from-right">Availability</p>
+          </div>
+        </div>
+      </div>
+      <div class="sticky-left vertical shadow">
+        <div class="contact-info ">
+          <div class="contact-item">
+  
+            <a href="tel:+393453281610">+39 345 328 1610</a>
+            <span>Call Us:</span>
+          </div>
+          <div class="contact-item ">
+            <a href="mailto:aquadrocasavacanze@gmail.com">aquadrocasavacanze@gmail.com</a>
+            <span>Email Us:</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="controls">
+                <label for="apartment">Chose Apartment:</label>
+                <select id="apartment" class="form-control mb-4">
+                  <option value="1">Apartment 1</option>
+                  <option value="2">Apartment 2</option>
+                </select>
+              </div>
+            <div class="controls">
+              <label for="year">Year:</label>
+              <select id="year" class="form-control mb-4"></select>
+            </div>
+            <div class="controls">
+              <label for="month">Month:</label>
+              <select id="month" class="form-control mb-4">
+                <option value="0">January</option>
+                <option value="1">February</option>
+                <option value="2">March</option>
+                <option value="3">April</option>
+                <option value="4">May</option>
+                <option value="5">June</option>
+                <option value="6">July</option>
+                <option value="7">August</option>
+                <option value="8">September</option>
+                <option value="9">October</option>
+                <option value="10">November</option>
+                <option value="11">December</option>
+              </select>
+            </div>
+            
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="calendar"></div>
+          </div>
+        </div>
+      </div>
+      <hr class="featurette-divider" />
+
+  </div>
+  <div id="map" class="map shadow"></div>
+</main>
+
+  <div class="dark-brown fixed-bottom">
+    <footer
+      class="d-flex flex-wrap justify-content-between align-items-center py-1 container"
+    >
+      <ul class="nav col-md-4 justify-content-start list-unstyled d-flex">
+        <li class="ms-3">
+          <a
+            aria-label="Chat on WhatsApp"
+            href="https://wa.me/393453281610"
+            target="_blank"
+          >
+            <img
+              alt="WhatsApp icon"
+              src="../assets/svg/whatsapp-svgrepo-com.svg"
+              width="28"
+              height="28"
+            />
+          </a>
+        </li>
+        <li class="ms-3">
+          <a href="tel:+393453281610">
+            <img
+              src="../assets/svg/phone.svg"
+              alt="phone icon"
+              width="28"
+              height="28" />
+          </a>
+        </li>
+        <li class="ms-3">
+          <a target="_blank" href="mailto: aquadrocasavacanze@gmail.com">
+            <img
+              src="../assets/svg/mail-svgrepo-com.svg"
+              alt="email icon"
+              width="28"
+              height="28"
+            />
+          </a>
+        </li>
+        <li class="ms-3">
+          <a
+            target="_blank"
+            href="https://www.facebook.com/profile.php?id=100068308672091"
+          >
+            <img
+              src="../assets/svg/facebook.svg"
+              alt="facebook icon"
+              width="28"
+              height="28"
+            />
+          </a>
+        </li>
+        <li class="ms-3">
+          <a
+            target="_blank"
+            href="https://www.instagram.com/aquadrocasavacanze/"
+          >
+            <img
+              src="../assets/svg/instagram-1-svgrepo-com.svg"
+              alt="instagram icon"
+              width="28"
+              height="28"
+            />
+          </a>
+        </li>
+        <li class="ms-3">
+          <a
+            target="_blank"
+            href="https://www.tripadvisor.com/VacationRentalReview-g187900-d23413441-Aquadro_Casa_Vacanze-Piombino_Province_of_Livorno_Tuscany.html"
+          >
+            <img
+              src="../assets/svg/tripadvisor-logo-svgrepo-com.svg"
+              alt="tripadvisor icon"
+              width="28"
+              height="28"
+            />
+          </a>
+        </li>
+      </ul>
+      <p class="pt-1 vanish text-secondary">Copyright © 2024. All rights reserved.</p>
+    </footer>
+  </div>
+  <script
+  src="https://code.jquery.com/jquery-3.7.1.js"
+  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+  <script src="../scripts/script.js"></script>
+</body>
+</html>

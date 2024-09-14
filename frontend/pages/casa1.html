@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apartment 1</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">  
+  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="icon" type="image/png" href="../assets/svg/favicon.ico" />
+  </head>
+  <body>
+    <header class="dark-brown sticky-top ">
+      <div class="container">  
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="../../index.html">
+              <img
+              src="../assets/svg/logo.jpg "
+                alt="Aquadro logo"
+                width="50"
+                height="50"
+                class="d-inline-block logo"
+              />
+              <span class="fs-4 ms-4 text-light">Aquadro</span>
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-dark navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item m-2">
+                  <a class="nav-link text-light" href="../../index.html">Home</a>
+                </li>
+                <li class="nav-item m-2">
+                  <a class="nav-link gold-text" href="./casa1.html">Apartment 1</a>
+                </li>
+                <li class="nav-item m-2">
+                  <a class="nav-link text-light" href="./casa2.html">Apartment 2</a>
+                </li>
+                <li class="nav-item m-2">
+                  <a class="nav-link text-light" href="./activities.html"
+                  >Activities in Piombino</a
+                >
+              </li>
+              <li class="nav-item m-2">
+                <a class="nav-link text-light" href="./calendar.html"
+                  >Availability</a
+                >
+              </li>
+              <li class="nav-item m-2">
+                <a 
+                target="_blank"
+                href="https://www.airbnb.it/rooms/49635259?source_impression_id=p3_1713806433_qxi2ILpo7mhVFQXY#availability-calendar">
+
+                  <button type="button" class="btn gold2" >
+                  Book on Airbnb
+                </button>
+                </a>
+                
+              </li>
+        
+              <li class="nav-item m-2">
+                <a 
+                target="_blank"
+                href="./reservation.html"
+                >
+                  <button type="button" class="btn gold" >
+                  BOOK WITH US
+                </button>
+                </a>
+                
+              </li>
+            </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main >
+      <div class="py-0">
+        <div class="p-5 mb-4 bg-body-tertiary casa1-image">
+          <div class="container container-fluid py-5">
+            <h1 class="display-3 fw-bold slide-from-left">First</h1>
+            <p class="col-md-8 fs-2 slide-from-right">Apartment</p>
+          </div>
+        </div>
+      </div>
+      <div class="sticky-left vertical shadow">
+        <div class="contact-info ">
+          <div class="contact-item">
+  
+            <a href="tel:+393453281610">+39 345 328 1610</a>
+            <span>Call Us:</span>
+          </div>
+          <div class="contact-item ">
+            <a href="mailto:aquadrocasavacanze@gmail.com">aquadrocasavacanze@gmail.com</a>
+            <span>Email Us:</span>
+          </div>
+        </div>
+      </div>
+
+     <div class="container marketing">
+      <div class="row featurette py-5 ">
+        <div class="col-md-7 hidden left">
+          <h2 class="featurette-heading fw-normal lh-1 ">
+            Living room
+          </h2>
+          <p class="lead">
+            <br>
+            <img src="../assets/svg/ac.svg" alt="air conditioning icon" class="amenities-icon"> 
+            Air Conditioning<br />
+            <br>
+            <img src="../assets/svg/books.svg" alt="books icon" class="amenities-icon">
+            Books & Magazines<br />
+            <br>
+            <img src="../assets/svg/heat.svg" alt="radiator icon" class="amenities-icon">
+            Heating <br />
+            <br>
+            <img src="../assets/svg/smarttv.svg" alt="smart tv icon" class="amenities-icon">
+            55" Smart TV <br />
+            <br>
+            <img src="../assets/svg/wifi.svg" alt="wifi icon" class="amenities-icon">
+            High Speed Wi-Fi
+          </p>
+        </div>
+        <div class="col-md-5 hidden right">
+          <img
+            class="featurette-image img-fluid mx-auto shadow"
+            width="500"
+            height="500"
+            role="img"
+            preserveAspectRatio="xMidYMid slice"
+            focusable="false"
+            src="../assets/img/casa1/500x500/salotto.png"
+            alt="a living room with black table table and chairs and a red sofa ">
+        </img>
+        </div>
+      </div>
+      <hr class="featurette-divider" />
+      <div class="row featurette py-5">
+        <div class="col-md-7 order-md-2 hidden left">
+          <h2 class="featurette-heading fw-normal lh-1">
+            Bedroom
+          </h2>
+          
+          <p class="lead">
+            <br>
+            <img src="../assets/svg/bed.svg" alt="double bed icon" class="amenities-icon"> 
+            Double bed <br />
+            <br>
+            <img src="../assets/svg/ac.svg" alt="air conditioning icon" class="amenities-icon"> 
+            Air conditioning <br />
+            <br>
+            <img src="../assets/svg/pillow.svg" alt="pillows icon" class="amenities-icon"> 
+            Extra pillows and blankets <br />
+            <br>
+            <img src="../assets/svg/iron.svg" alt="ironing board icon" class="amenities-icon"> 
+            Iron and ironing board <br />
+            <br>
+            <img src="../assets/svg/closet.svg" alt="warderobe icon" class="amenities-icon"> 
+            Warderobe with hangers <br />
+            <br>
+            <img src="../assets/svg/usb.svg" alt="usb icon" class="amenities-icon"> 
+            USB charging ports
+          </p>
+        </div>
+        <div class="col-md-5 order-md-1 hidden left">
+          <img
+            class="featurette-image img-fluid mx-auto shadow"
+            width="500"
+            height="500"
+            role="img"
+            preserveAspectRatio="xMidYMid slice"
+            focusable="false"
+            src="../assets/img/casa1/500x500/letto.png"
+            alt="a bedroom with a bed that has a grey bed cover"
+          ></img>
+        </div>
+      </div>
+      <hr class="featurette-divider" />
+
+      <div class="row featurette py-5">
+        <div class="col-md-7 hidden left">
+          <h2 class="featurette-heading fw-normal lh-1">
+            Dining area
+          </h2>
+          <p class="lead">
+            <br>
+            <img src="../assets/svg/dinning.svg" alt="dining table icon" class="amenities-icon"> 
+            Dining table<br />
+            <br>
+            <img src="../assets/svg/wine.svg" alt="wine glasses icon" class="amenities-icon"> 
+            Wine glasses<br />
+            <br>
+            <img src="../assets/svg/silver.svg" alt="plate and silverware icon" class="amenities-icon"> 
+            Silverware and dinnerware <br>
+            <br>
+            <img src="../assets/svg/ac.svg" alt="air conditioning icon" class="amenities-icon"> 
+            Air conditioning<br />
+            <br>
+            <img src="../assets/svg/heat.svg" alt="radiator icon" class="amenities-icon"> 
+            Heating <br />
+            <br>
+            <img src="../assets/svg/wifi.svg" alt="wifi icon" class="amenities-icon"> 
+            High Speed Wi-Fi <br />
+          </p>
+        </div>
+        <div class="col-md-5 hidden left">
+          <img
+            class="featurette-image img-fluid mx-auto shadow"
+            width="500"
+            height="500"
+            role="img"
+            preserveAspectRatio="xMidYMid slice"
+            focusable="false"
+            src="../assets/img/casa1/500x500/pranzo.png"
+            alt="black dinning table and chairs and a TV in the background">
+        </img>
+        </div>
+      </div>
+      <hr class="featurette-divider" />
+      <div class="row featurette py-5 ">
+        <div class="col-md-7 order-md-2 hidden left">
+          <h2 class="featurette-heading fw-normal lh-1">
+            Fully equipped kitchen
+          </h2>
+          <p class="lead">
+            <br>
+            <img src="../assets/svg/coffe.svg" alt="coffee machine and coffe cup icon" class="amenities-icon"> 
+            Nespresso™ coffee machine <br />
+            <br>
+            <img src="../assets/svg/microwave.svg" alt="microwave icon" class="amenities-icon"> 
+            Microwave <br />
+            <br>
+            <img src="../assets/svg/kettle.svg" alt="kettle icon" class="amenities-icon"> 
+            Kettle <br />
+            <br>
+            <img src="../assets/svg/juicer.svg" alt="electric juicer icon" class="amenities-icon"> 
+            Electric citrus juicer <br />
+            <br>
+            <img src="../assets/svg/toaster.svg" alt="toaster icon" class="amenities-icon"> 
+            Toaster <br />
+            <br>
+            <img src="../assets/svg/freezer.svg" alt="refrigerator icon" class="amenities-icon"> 
+            Refrigerator and freezer <br />
+          </p>
+        </div>
+        <div class="col-md-5 order-md-1 hidden left">
+          <img
+            class="featurette-image img-fluid mx-auto shadow"
+            width="500"
+            height="500"
+            role="img"
+            preserveAspectRatio="xMidYMid slice"
+            focusable="false"
+            src="../assets/img/casa1/500x500/cucina.png"
+            alt="kitchen with appliances" >
+        </img>
+        </div>
+      </div>
+      <hr class="featurette-divider" />
+      <div class="row featurette py-5 ">
+        <div class="col-md-7 hidden left">
+          <h2 class="featurette-heading fw-normal lh-1">
+            Bathroom
+
+          </h2>
+          <p class="lead">
+            <br>
+            <img src="../assets/svg/shower.svg" alt="shower icon" class="amenities-icon"> 
+            Walk-in shower <br />
+            <br>
+            <img src="../assets/svg/hair.svg" alt="hair dryer icon" class="amenities-icon"> 
+            Hair dryer <br />
+            <br>
+            <img src="../assets/svg/bidet.svg" alt="bidet icon" class="amenities-icon"> 
+            Bidet <br />
+            <br>
+            <img src="../assets/svg/gel.svg" alt="shower gel icon" class="amenities-icon"> 
+            Shower gel <br />
+            <br>
+            <img src="../assets/svg/soap.svg" alt="liquid soap icon" class="amenities-icon"> 
+            Body soap <br />
+            <br>
+            <img src="../assets/svg/shampoo.svg" alt="shampoo icon" class="amenities-icon"> 
+            Shampoo <br />
+          </p>
+        </div>
+        <div class="col-md-5 hidden left">
+          <img
+            class="featurette-image img-fluid mx-auto shadow"
+            width="500"
+            height="500"
+            role="img"
+            preserveAspectRatio="xMidYMid slice"
+            focusable="false"
+            src="../assets/img/casa1/500x500/bagno.png"
+            alt="bathroom with a walk-in shower and a sink" >
+        </img>
+        </div>
+      </div>
+      <hr class="featurette-divider" />
+      <div class="row featurette py-5">
+        <div class="col-md-7 order-md-2 hidden left">
+          <h2 class="featurette-heading fw-normal lh-1">
+             Outdoor space
+          </h2>
+          <p class="lead">
+            <br>
+            <img src="../assets/svg/aperitivo.svg" alt="cocktail icon" class="amenities-icon"> 
+            Perfect place for aperiitivo <br />
+            <br>
+
+            <img src="../assets/svg/chat.svg" alt="people chatting icon" class="amenities-icon"> 
+            Great spot for a chat <br />
+            <br>
+            <img src="../assets/svg/air.svg" alt="air icon" class="amenities-icon"> 
+            Ideal for some fresh air <br />
+            <br>
+          </p>
+        </div>
+        <div class="col-md-5 order-md-1 hidden left">
+          <img
+            class="featurette-image img-fluid mx-auto shadow"
+            width="500"
+            height="500"
+            role="img"
+            preserveAspectRatio="xMidYMid slice"
+            focusable="false"
+            src="../assets/img/casa1/500x500/esterni.png"
+            alt="balcony with two black chairs and a small white table" >
+        </img>
+        </div>
+      </div>
+      <hr class="featurette-divider" />
+      <div class="container py-5">
+        <div class="row hidden fade-in d-flex justify-content-center">
+          <div class="col-lg-4 text-center">
+            <img class="rounded-circle shadow" width="140" height="140" src="../assets/img/casa1/reviewers/hillel.webp" alt="man with open arms"  preserveAspectRatio="xMidYMid slice"></img>
+            <h4 class="fw-normal pt-3">Hillel</h4>
+            <span class="text-body-secondary">Miami Beach - Florida</span>
+            <p>"We loved staying at this place-the house was clean, neat, and practical. Also, the keys go in the doors the right way, which is great..."</p>
+            <p><a class="btn gold" target="_blank" href="https://www.airbnb.it/rooms/49635259/reviews?source_impression_id=p3_1713806433_qxi2ILpo7mhVFQXY&scroll_to_review=1135370032430349686">Read the review</a></p>
+          </div>
+          <div class="col-lg-4 text-center">
+            <img class="rounded-circle shadow" width="140" height="140" src="../assets/img/casa1/reviewers/qiang.webp" alt="man on the seaside with blue sky"  preserveAspectRatio="xMidYMid slice"></img>
+            <h4 class="fw-normal pt-3">Qiang</h4>
+            <span class="text-body-secondary">Wayland, Massachusetts</span>
+            <p>"Peccato che abbiamo trascorso qui solo 1 notte. Rispetto al precedente Airbnb che abbiamo avuto a Roma, questo posto è un paradiso..."</p>
+            <p><a class="btn gold" target="_blank" href="https://www.airbnb.it/rooms/49635259/reviews?source_impression_id=p3_1713806433_qxi2ILpo7mhVFQXY&scroll_to_review=1135370032430349686">Read the review</a></p>
+          </div>
+          <div class="col-lg-4 text-center">
+            <img class="rounded-circle shadow" width="140" height="140" src="../assets/img/casa1/reviewers/alessandra.webp" alt="woman with sun glasses"  preserveAspectRatio="xMidYMid slice"></img>
+            <h4 class="fw-normal pt-3">Alessandra</h4>
+            <span class="text-body-secondary">Italia</span>
+            <p>"Aldo e Antonio seppur non li abbia conosciuti fisicamente sanno come prendersi cura dei propri ospiti. Sono attenti ai particolari che personalmente... "</p>
+            <p><a class="btn gold" target="_blank" href="https://www.airbnb.it/rooms/49635259/reviews?source_impression_id=p3_1713806433_qxi2ILpo7mhVFQXY&scroll_to_review=1135370032430349686">Read the review</a></p>
+          </div>
+        </div>
+      </div>
+      
+
+    
+    <div class="py-5">
+      <div
+        id="carouselExampleAutoplaying"
+        class="carousel slide hidden fade-in shadow"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="../assets/img/casa1/1440x1080/1.webp"
+              class="d-block w-100"
+              alt="a bedroom with a bed that has a grey bed cover"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="../assets/img/casa1/1440x1080/2.webp"
+              class="d-block w-100"
+              alt="small white table, black book and lamp on top, and part of a red sofa"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="../assets/img/casa1/1440x1080/3.webp"
+              class="d-block w-100"
+              alt="a living room with black  table and chairs and a red sofa"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="../assets/img/casa1/1440x1080/4.webp"
+              class="d-block w-100"
+              alt="a living room with black table  and chairs and a red sofa and you can see part of the kitchen"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="../assets/img/casa1/1440x1080/5.webp"
+              class="d-block w-100"
+              alt="a flower vase on the table and an Aquadro business card"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="../assets/img/casa1/1440x1080/6.webp"
+              class="d-block w-100"
+              alt="a bedroom with a bed that has a grey bed cover and a small table with a chair"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="../assets/img/casa1/1440x1080/7.webp"
+              class="d-block w-100"
+              alt="a living room with black table  and chairs and a red sofa and you can see part of the kitchen"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="../assets/img/casa1/1440x1080/8.webp"
+              class="d-block w-100"
+              alt="three people walking with the sea in the background"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="../assets/img/casa1/1440x1080/9.webp"
+              class="d-block w-100"
+              alt="kitchen with appliances"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="../assets/img/casa1/1440x1080/10.webp"
+              class="d-block w-100"
+              alt="a bedroom with a bed that has a grey bed cover and a small table with a chair and a warderobe"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="../assets/img/casa1/1440x1080/11.webp"
+              class="d-block w-100"
+              alt="black dinning table and chairs and a TV in the background"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="../assets/img/casa1/1440x1080/12.webp"
+              class="d-block w-100"
+              alt="a bedroom bed with lamps"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="../assets/img/casa1/1440x1080/13.webp"
+              class="d-block w-100"
+              alt="kitchen with appliances"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="../assets/img/casa1/1440x1080/14.webp"
+              class="d-block w-100"
+              alt="a living room with black  table and chairs and a red sofa"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="../assets/img/casa1/1440x1080/15.webp"
+              class="d-block w-100"
+              alt="balcony with two black chairs and a small white table"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="../assets/img/casa1/1440x1080/16.webp"
+              class="d-block w-100"
+              alt="bathroom with a walk-in shower and a sink and some towels"
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="map" class="map shadow"></div>
+</main>
+
+  <div class="dark-brown fixed-bottom">
+    <footer
+      class="d-flex flex-wrap justify-content-between align-items-center py-1 container"
+    >
+      <ul class="nav col-md-4 justify-content-start list-unstyled d-flex">
+        <li class="ms-3">
+          <a
+            aria-label="Chat on WhatsApp"
+            href="https://wa.me/393453281610"
+            target="_blank"
+          >
+            <img
+              alt="WhatsApp icon"
+              src="../assets/svg/whatsapp-svgrepo-com.svg"
+              width="28"
+              height="28"
+            />
+          </a>
+        </li>
+        <li class="ms-3">
+          <a href="tel:+393453281610">
+            <img
+              src="../assets/svg/phone.svg"
+              alt="phone icon"
+              width="28"
+              height="28" />
+          </a>
+        </li>
+        <li class="ms-3">
+          <a target="_blank" href="mailto: aquadrocasavacanze@gmail.com">
+            <img
+              src="../assets/svg/mail-svgrepo-com.svg"
+              alt="email icon"
+              width="28"
+              height="28"
+            />
+          </a>
+        </li>
+        <li class="ms-3">
+          <a
+            target="_blank"
+            href="https://www.facebook.com/profile.php?id=100068308672091"
+          >
+            <img
+              src="../assets/svg/facebook.svg"
+              alt="facebook icon"
+              width="28"
+              height="28"
+            />
+          </a>
+        </li>
+        <li class="ms-3">
+          <a
+            target="_blank"
+            href="https://www.instagram.com/aquadrocasavacanze/"
+          >
+            <img
+              src="../assets/svg/instagram-1-svgrepo-com.svg"
+              alt="instagram icon"
+              width="28"
+              height="28"
+            />
+          </a>
+        </li>
+        <li class="ms-3">
+          <a
+            target="_blank"
+            href="https://www.tripadvisor.com/VacationRentalReview-g187900-d23413441-Aquadro_Casa_Vacanze-Piombino_Province_of_Livorno_Tuscany.html"
+          >
+            <img
+              src="../assets/svg/tripadvisor-logo-svgrepo-com.svg"
+              alt="tripadvisor icon"
+              width="28"
+              height="28"
+            />
+          </a>
+        </li>
+      </ul>
+      <p class="pt-1 vanish text-secondary">Copyright © 2024. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+  <script src="../scripts/script.js"></script>
+</body>
+</html>
