@@ -10,12 +10,12 @@ const port = 3000;
 
 app.use(cors());
 
-// Middleware pentru fisierele JSON
+
 app.use(bodyParser.json());
 
-// Endpoint pentru gestionarea trimiterea formulrului
+
 app.post("/sendEmail", (req, res) => {
-  // Extragerea datelor din request
+
   const {
     lastname,
     name,
@@ -30,8 +30,8 @@ app.post("/sendEmail", (req, res) => {
 
   // compunem mesajul
   const mailOptions = {
-    from: "mihai.murg@demomailtrap.com", // Adresa de unde sosesc mesajele
-    to: "myshu_m@yahoo.com", // Adresa unde sunt trimise mesajele
+    from: "mihai.murg@demomailtrap.com", 
+    to: "myshu_m@yahoo.com", 
     subject: "Test Email",
     html: `
             <p><strong>Last Name:</strong> ${lastname}</p>
@@ -46,7 +46,7 @@ app.post("/sendEmail", (req, res) => {
         `,
   };
 
-  // Crearea unui transporter folosind credentialele Mailtrap
+
   var transporter = nodemailer.createTransport({
     host: "live.smtp.mailtrap.io",
     port: 587,
@@ -56,7 +56,7 @@ app.post("/sendEmail", (req, res) => {
     },
   });
 
-  // Trimitearea mesajului
+
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       console.error("Error:", error);
@@ -68,7 +68,7 @@ app.post("/sendEmail", (req, res) => {
   });
 });
 
-// Start server
+
 app.listen(port, () => {
   console.log(`Server is listening on port ${port}`);
 });

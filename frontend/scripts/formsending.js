@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
   reservationForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    // Colectam datele din formular
     const formData = {
       lastname: document.getElementById("lastname").value,
       name: document.getElementById("name").value,
@@ -17,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
       message: document.getElementById("message").value,
     };
 
-    // Trimitem datele din formular catre server
     fetch("https://server-2gcr.onrender.com/sendEmail", {
       method: "POST",
       headers: {
